@@ -23,7 +23,7 @@ fn main() -> ! {
         // Toggle the LED output
         per.GPIOB.odr.modify(|r,w| w.odr7().bit(r.odr7().bit_is_clear()));     
 
-        for _i in 0..100000 {
+        for _i in 0..500000 {
              asm::nop()
         }
     }
